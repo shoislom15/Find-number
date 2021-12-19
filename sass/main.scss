@@ -1,0 +1,110 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Bakbak One', cursive;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+
+}
+
+section{
+    background-image: url("../img/daniel-sessler-YVj9hyQgtkY-unsplash.jpg");
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border: 1px solid transparent;      
+    .container{
+        padding: 50px;
+        text-align: center;
+        font-size: 45px;
+        position: relative;
+
+        .form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            input{
+                padding: 15px 30px;
+                border: none;
+                border-radius: 15px;
+                margin-top: 70px;
+                font-size: 20px;
+                outline: none;
+                margin-bottom: 40px;
+                background-color: rgba(255, 255, 255, 1);
+    
+                    &::-webkit-outer-spin-button,
+                    &::-webkit-inner-spin-button {
+                    -webkit-appearance: none;
+                    margin: 0;
+                }
+            }
+    
+            button{
+                background-color: #f4b434;
+                padding: 15px 30px;
+                font-size: 20px;
+                outline: none;
+                border: none;
+                border-radius: 15px;
+            }
+        }
+
+        .square{
+            width: 22%;
+            font-size: 18px;
+            position: absolute;
+            right: -400px;
+            top: 20px;
+            padding: 7px;
+            background-color: #f4b434;
+        }
+
+        .square{
+            transition: 1s;
+            position: absolute;
+            right: -400px;
+            top: 20px;
+
+
+                i{
+                    position: absolute;
+                    top: 7px;
+                    right: 7px;
+                }
+            
+        }
+
+        .circle{
+            border-radius: 50%;
+            position: fixed;
+            width: 1420px;
+            height: 1420px;
+            background-color: #f4b434;
+            bottom: -710px;
+            left: calc( ( 100% - 1420px ) / 2 );
+            z-index: 100;
+            padding-top: 150px;
+            bottom: -1430px;
+            transition: 0.7s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            i{
+                font-size: 150px;
+                margin-top: 100px;
+            }
+
+            .top{
+                max-width: 600px;
+            }
+        }
+
+    }
+}
+

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Komputer oylagan sonni toping</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bakbak+One&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <section>
+        <div class="container">
+            <div class="square" id="square">
+                <i onclick="remove()" class="fas fa-times"></i>
+                <p id="squareText">Hato kiritdingiz! Yana bir bor urinib ko'ring</p>
+                <p id=""></p>
+            </div>
+            <h1><span id="attempts">10</span>ta imkoniyatingiz qoldi</h1>
+            <div class="form">
+                <input id="number" type="number" placeholder="0-100">
+                <button onclick="comparement()">Kiritish</button>
+            </div>
+            <div class="circle" id="circle">
+                <div class="top" id="top">
+                    Tabriklaymiz siz yutdingiz!
+                </div>
+                <div class="bottom">
+                    <i onclick="circleback()" class="fas fa-redo"></i>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        const num = document.getElementById("number");
+        let rand = Math.floor(Math.random() * 100) + 1;
+        const square = document.getElementById("square");
+        const circle = document.getElementById("circle");
+        const squareText = document.getElementById("squareText")
+
+        function circleback() {
+            circle.style.transform = ("translateY(0)");
+            attempts.innerHTML = 10;
+            counter = 10;
+            rand = Math.floor(Math.random() * 100) + 1;
+            console.log(rand);
+            setTimeout(textBack, 300)
+        }
+
+        const textBack = () => document.getElementById("top").innerHTML = "Tabriklaymiz siz yutdingiz!";
+
+        const squareBack = () => square.style.transform = ("translateX(0)");
+
+        console.log(rand);
+        let counter = 10;
+        number.focus();
+        function comparement() {
+            let number = num.value;
+
+
+            if (number > rand) squareText.innerHTML = "Hato kiritdingiz! Kiritgan soningiz katta";
+            else squareText.innerHTML = "Hato kiritdingiz! Kiritgan soningiz kichik";
+
+            if (number == "") {
+                squareText.innerHTML = "Son kiritilmadi. Iltimos son kiriting!";
+                counter++;
+            }
+
+            if (number == rand) {
+                circle.style.transform = ("translateY(-50%)");
+                square.style.transform = ("translateX(0)")
+            } else {
+                square.style.transform = ("translateX(-425px)")
+                setTimeout(squareBack, 3000)
+            }
+
+
+            counter--;
+            document.getElementById("attempts").innerHTML = (counter)
+            if (counter == 0) {
+                document.getElementById("top").innerHTML = "Afsuski sizning imkoniyatlaringiz soni tugadi! Iltimos yana bir bor urinib ko'ring"
+                circle.style.transform = ("translateY(-50%)");
+                square.style.transform = ("translateX(0)")
+            }
+        }
+
+
+        function remove() {
+            square.style.transform = ("translateX(0)")
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

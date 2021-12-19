@@ -1,0 +1,98 @@
+* {
+  box-sizing: border-box;
+  font-family: "Bakbak One", cursive;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+section {
+  background-image: url("../img/daniel-sessler-YVj9hyQgtkY-unsplash.jpg");
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border: 1px solid transparent;
+}
+section .container {
+  padding: 50px;
+  text-align: center;
+  font-size: 45px;
+  position: relative;
+}
+section .container .form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section .container .form input {
+  padding: 15px 30px;
+  border: none;
+  border-radius: 15px;
+  margin-top: 70px;
+  font-size: 20px;
+  outline: none;
+  margin-bottom: 40px;
+  background-color: white;
+}
+section .container .form input::-webkit-outer-spin-button, section .container .form input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+section .container .form button {
+  background-color: #f4b434;
+  padding: 15px 30px;
+  font-size: 20px;
+  outline: none;
+  border: none;
+  border-radius: 15px;
+}
+section .container .square {
+  width: 22%;
+  font-size: 18px;
+  position: absolute;
+  right: -400px;
+  top: 20px;
+  padding: 7px;
+  background-color: #f4b434;
+}
+section .container .square {
+  transition: 1s;
+  position: absolute;
+  right: -400px;
+  top: 20px;
+}
+section .container .square i {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+}
+section .container .circle {
+  border-radius: 50%;
+  position: fixed;
+  width: 1420px;
+  height: 1420px;
+  background-color: #f4b434;
+  bottom: -710px;
+  left: calc((100% - 1420px) / 2);
+  z-index: 100;
+  padding-top: 150px;
+  bottom: -1430px;
+  transition: 0.7s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section .container .circle i {
+  font-size: 150px;
+  margin-top: 100px;
+}
+section .container .circle .top {
+  max-width: 600px;
+}
+
+/*# sourceMappingURL=main.css.map */
